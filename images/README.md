@@ -32,10 +32,10 @@ Want different objects? Use any names you like, then update the matching `cutout
 | File name | Size (px) | Shape | Where |
 |---|---|---|---|
 | `helena-about.jpg` | 1000 × 1250 | 4:5 | Chapter 1 of the book, plus the Home page collage |
-| `dogs-1.jpg`, `dogs-2.jpg`, `dogs-3.jpg` | 600 × 600 | square | Chapter 7 photo-booth strip, plus Home |
+| `dogs-1.jpg`, `dogs-2.jpg`, `dogs-3.jpg` | 600 × 600 | square | Chapter 8 photo-booth strip, plus Home |
 | `film-interstellar.jpg`, `film-arrival.jpg`, `film-dune.jpg`, `film-little-miss-sunshine.jpg` | 400 × 600 | 2:3 poster | Chapter 3: your top 4 films |
 | `book-normal-people.jpg`, `book-talking-at-night.jpg`, `book-song-of-achilles.jpg`, `book-project-hail-mary.jpg` | 400 × 600 | 2:3 cover | Chapter 4: your favorite books |
-| `food.jpg` | 800 × 800 | square | Chapter 5: a favorite meal |
+| `food.jpg` | 800 × 800 | square | Chapter 6: a favorite meal |
 
 **Text still to fill in:** open `about.html` and search for these placeholders: `restaurant` (Beli top spots), `song · artist` (on repeat) and `name · name` (your dogs).
 
