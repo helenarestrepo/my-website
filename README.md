@@ -17,7 +17,7 @@ Other files:
 
 ```
 css/styles.css               ← colors, fonts, layout (palette is at the very top)
-js/main.js                   ← mobile menu, fade-ins, counters, carousel, flip book, photo viewer
+js/main.js                   ← mobile menu, fade-ins, counters, flip book, photo viewer
 images/                      ← your photos go here (see images/README.md)
 Helena-Restrepo-Resume.pdf   ← linked from every "Résumé" button
 ```

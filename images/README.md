@@ -5,27 +5,17 @@ The site picks them up automatically, with no code changes needed. Until a file 
 
 **Tips**
 - Photos: export as **JPG, quality ~80%**, under **400 KB** each (free tool: [squoosh.app](https://squoosh.app)).
-- Cutouts: export as **PNG with a transparent background** (free tool: [remove.bg](https://www.remove.bg)).
 - Bigger is fine if the **shape** matches; the site crops to fill each frame.
 - Only use client work you're allowed to share publicly.
 
 ---
 
-## 1. Home page cutouts → `images/cutouts/` folder
+## 1. Home page
 
-These sit along the bottom of the home page hero, Pretty Little Marketer style. Use **transparent PNGs** with the object touching the bottom edge of the image. Black-and-white works great for the photo of you.
-
-| File name | Shape (w × h) | Idea |
-|---|---|---|
-| `cutouts/helena.png` | 900 × 1200 | You, cut out (the centerpiece) |
-| `cutouts/palm.png` | 800 × 1200 | A palm tree (Miami) |
-| `cutouts/cafecito.png` | 800 × 800 | A cafecito or coffee cup |
-| `cutouts/dog.png` | 800 × 800 | One of your dogs |
-| `cutouts/popcorn.png` | 900 × 1200 | Popcorn bucket or film clapper |
-| `cutouts/vinyl.png` | 800 × 800 | A record or headphones |
-| `cutouts/boots.png` | 900 × 1200 | Cowboy boots (Texas) |
-
-Want different objects? Use any names you like, then update the matching `cutouts/...` lines near the top of `index.html`.
+| File name | Size (px) | Shape | Where |
+|---|---|---|---|
+| `helena-hero.jpg` | 1000 × 1250 | 4:5 portrait | Home page hero, with the notification banners over it |
+| `helena-about.jpg` | 1000 × 1250 | 4:5 portrait | Also used as your round avatar in the chat and contact card |
 
 ## 2. About page (the book) & home "get to know me"
 
@@ -47,7 +37,7 @@ Want different objects? Use any names you like, then update the matching `cutout
 | `quit-games-1.jpg`, `monarch-1.jpg`, `sra-1.jpg`, `classical-waves-1.jpg` | 1600 × 800 | 2:1 wide banner |
 | `…-2.jpg` and `…-3.jpg` for each project (e.g. `monarch-2.jpg`) | 1200 × 900 | 4:3 |
 
-## 4. Social page & Home dark section
+## 4. Social page & Home phone mockup
 
 | File names | Size (px) | Shape |
 |---|---|---|
