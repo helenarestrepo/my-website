@@ -236,4 +236,7 @@
     };
     follow();
   }
+
+  /* ---------- Map: hold the plane mid-flight for reduced motion ---------- */
+  if (reduceMotion) $$('svg.map').forEach((svg) => { if (svg.pauseAnimations) { svg.setCurrentTime(3.5); svg.pauseAnimations(); } });
 })();

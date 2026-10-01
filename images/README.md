@@ -15,7 +15,7 @@ The site picks them up automatically, with no code changes needed. Until a file 
 | File name | Size (px) | Shape | Where |
 |---|---|---|---|
 | `helena-hero.jpg` | 1000 × 1250 | 4:5 portrait | Home page hero, with the notification banners over it |
-| `helena-about.jpg` | 1000 × 1250 | 4:5 portrait | Also used as your round avatar in the chat and contact card |
+| `helena-about.jpg` | 1000 × 1250 | 4:5 portrait | About book chapter 1, and your round avatar on the contact card |
 
 ## 2. About page (the book) & home "get to know me"
 
@@ -37,7 +37,7 @@ The site picks them up automatically, with no code changes needed. Until a file 
 | `quit-games-1.jpg`, `monarch-1.jpg`, `sra-1.jpg`, `classical-waves-1.jpg` | 1600 × 800 | 2:1 wide banner |
 | `…-2.jpg` and `…-3.jpg` for each project (e.g. `monarch-2.jpg`) | 1200 × 900 | 4:3 |
 
-## 4. Social page & Home phone mockup
+## 4. Social page phone mockup
 
 | File names | Size (px) | Shape |
 |---|---|---|
