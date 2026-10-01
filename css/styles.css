@@ -350,10 +350,10 @@ a.glass:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift), ins
 }
 .clip { position: absolute; z-index: 3; pointer-events: none; filter: drop-shadow(0 4px 4px rgba(40, 44, 60, .25)); }
 .clip svg { display: block; width: 100%; height: auto; }
-.clip-binder { width: 100px; top: -60px; left: 50%; translate: -50% 0; }
+.clip-binder { width: 104px; top: -70px; left: 50%; translate: -50% 0; }
 /* binder clip handles tip back a little when you hover the card */
 .clip-binder .handles { transform-box: fill-box; transform-origin: 50% 100%; transition: transform .45s var(--spring); }
-a.glass:hover .clip-binder .handles { transform: scaleY(.82) skewX(-4deg); }
+a.glass:hover .clip-binder .handles { transform: scaleY(.9) rotate(-3deg); }
 .clip-paper { width: 26px; top: -30px; left: 30px; rotate: -8deg; }
 .clip-pin { width: 34px; top: -26px; right: 34px; rotate: 14deg; }
 
@@ -363,7 +363,7 @@ a.glass:hover .clip-binder .handles { transform: scaleY(.82) skewX(-4deg); }
 .back-link::before { content: "‹ "; }
 .case-cover { position: relative; margin-top: clamp(80px, 8vw, 100px); }
 .case-cover .ph { border-radius: var(--r-lg); box-shadow: var(--shadow-lift); }
-.case-cover .clip-binder { width: 116px; top: -70px; }
+.case-cover .clip-binder { width: 124px; top: -84px; }
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px; }
 .fact { padding: 16px 20px; }
 .fact + .fact { border-left: 1px solid var(--line); }
