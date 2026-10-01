@@ -43,13 +43,13 @@ The site picks them up automatically, with no code changes needed. Until a file 
 |---|---|---|
 | `social-01.jpg` … `social-06.jpg` | 1080 × 1350 | 4:5 (Instagram portrait) |
 
-## 5. Photography page (clipped paper sheets)
+## 5. Photography page (35mm slide mounts)
 
 | File names | Size (px) | Shape |
 |---|---|---|
-| `photo-01.jpg` … `photo-12.jpg` | 1200 × 1500 | 4:5 portrait |
+| `photo-01.jpg` … `photo-12.jpg` | 1500 × 1000 landscape (3:2) | except `photo-03`, `photo-07` and `photo-11`, which are **portrait 1000 × 1500 (2:3)** |
 
-**Captions:** open `photography.html` and replace each `caption goes here · location`.
+**Handwritten labels:** open `photography.html` and replace each `caption goes here` and `place · date` with your own words. The printed numbers and dates (like `MAR 26`) can be edited too.
 
 ## 6. Link preview
 

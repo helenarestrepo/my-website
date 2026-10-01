@@ -705,3 +705,48 @@ a.glass:hover::after { background-position: -30% 0; }
 .lightbox .sheet:hover { transform: rotate(-1deg); }
 .lightbox .sheet .ph { aspect-ratio: auto; min-height: min(58vh, 520px); }
 .lightbox .sheet .ph img { max-height: 66vh; object-fit: contain; background: #fff; }
+
+/* ---------- Photography: 35mm slide mounts with handwritten labels ---------- */
+.slides { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 24px); padding-top: 12px; }
+@media (max-width: 860px) { .slides { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .slides { grid-template-columns: repeat(2, 1fr); } }
+.slide {
+  position: relative; display: block; width: 100%; aspect-ratio: 1; padding: 0; border: 0; cursor: zoom-in; overflow: hidden;
+  container-type: inline-size; border-radius: 6%; background: var(--mount, #FBFAF6);
+  box-shadow: 0 1px 2px rgba(40, 44, 60, .08), 0 12px 24px -14px rgba(40, 44, 60, .4), inset 0 0 0 1px rgba(40, 44, 60, .05), inset 0 -3px 6px rgba(40, 44, 60, .05);
+  transition: transform .35s var(--spring), box-shadow .35s var(--ease);
+}
+.slide:hover, .slide:focus-visible { transform: translateY(-6px) rotate(-.8deg); box-shadow: 0 1px 2px rgba(40, 44, 60, .08), 0 22px 34px -16px rgba(40, 44, 60, .45), inset 0 0 0 1px rgba(40, 44, 60, .05); z-index: 2; }
+.slide .window {
+  position: absolute; left: 50%; top: 46%; translate: -50% -50%; width: 70%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 2.4cqw;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(40, 44, 60, .08);
+}
+.slide.p .window { width: 46%; aspect-ratio: 2 / 3; top: 43%; }
+.slide .window .ph { width: 100%; height: 100%; }
+.slide .window .ph::before { font-size: 3.2cqw; }
+/* printed (pink) mount text */
+.print { position: absolute; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: #E0668E; font-size: 3.6cqw; letter-spacing: .14em; text-transform: uppercase; line-height: 1.15; opacity: .9; }
+.print.num { top: 5%; left: 6%; font-size: 4.8cqw; letter-spacing: 0; color: #B9B3AE; }
+.print.datestamp { top: 5.6%; right: 6%; }
+.print.color { top: 4%; left: 0; right: 0; text-align: center; font-size: 3cqw; letter-spacing: .3em; }
+.print.color b { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 800; font-size: 6.4cqw; letter-spacing: 0; text-transform: none; }
+.print.project { top: 4.5%; left: 0; right: 0; text-align: center; rotate: 180deg; font-size: 3cqw; font-weight: 700; letter-spacing: .06em; }
+.print.side { right: 3.5%; top: 50%; translate: 0 -50%; writing-mode: vertical-rl; opacity: .6; }
+.print.line { left: 6%; right: 6%; text-align: left; font-size: 3cqw; font-weight: 700; letter-spacing: .06em; padding-bottom: .6cqw; border-bottom: 1.5px dotted #E0668E; }
+.print.l1 { bottom: 14%; } .print.l2 { bottom: 5%; right: 40%; }
+/* handwritten fill-ins */
+.hand { position: absolute; font-family: var(--hand), cursive; color: var(--ink-h, #2C2E36); font-size: calc(var(--hs, 7) * 1cqw); line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-transform: none; letter-spacing: 0; }
+.hand.cap { left: 7%; right: 7%; bottom: 13%; text-align: left; rotate: -2deg; }
+.hand.meta { right: 7%; bottom: 4.5%; font-size: calc(var(--hs, 7) * .72cqw); rotate: 1.5deg; opacity: .85; }
+.slide.p .hand.cap { bottom: 9.5%; text-align: center; }
+.slide.p .hand.meta { bottom: 3%; }
+.s-subject .hand.cap { left: 26%; bottom: 16.2%; rotate: -1deg; }
+.s-subject .hand.meta { left: 19%; right: auto; bottom: 6.6%; rotate: -1deg; }
+/* lightbox: projected onto a screen */
+.lightbox.projector { background: rgba(16, 17, 22, .95); backdrop-filter: none; }
+.projected { width: min(1000px, 90vw); text-align: center; }
+.projected .ph { background: #0c0d10; border-radius: 4px; min-height: min(56vh, 520px); box-shadow: 0 0 0 1px rgba(255, 255, 255, .05), 0 0 80px rgba(255, 255, 255, .1); }
+.projected .ph::before { color: rgba(255, 255, 255, .55); }
+.projected .ph img { max-height: 76vh; width: 100%; object-fit: contain; }
+.projected .cap { display: block; margin-top: 18px; font-family: 'Reenie Beanie', cursive; font-size: 2rem; color: #F2F2F5; }
+.lightbox.projector .round-btn { background: rgba(255, 255, 255, .14); color: #fff; box-shadow: none; }
