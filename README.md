@@ -7,7 +7,7 @@ My personal portfolio and resume site: plain HTML, CSS and JavaScript, hosted fr
 | Page | File |
 |---|---|
 | Home | `index.html` |
-| About Me (bio, experience, skills, education) | `about.html` |
+| About Me (flip book + experience, skills, education) | `about.html` |
 | Work (overview) | `work.html` |
 | Case studies | `work-quit-games.html`, `work-monarch.html`, `work-storage-rentals.html`, `work-classical-waves.html` |
 | Social | `social.html` |
@@ -17,7 +17,7 @@ Other files:
 
 ```
 css/styles.css               ← colors, fonts, layout (palette is at the very top)
-js/main.js                   ← mobile menu, fade-ins, number counters, photo viewer
+js/main.js                   ← mobile menu, fade-ins, counters, carousel, flip book, photo viewer
 images/                      ← your photos go here (see images/README.md)
 Helena-Restrepo-Resume.pdf   ← linked from every "Résumé" button
 ```
@@ -29,6 +29,7 @@ Helena-Restrepo-Resume.pdf   ← linked from every "Résumé" button
 - **Update the resume:** replace `Helena-Restrepo-Resume.pdf` with a new file of the **exact same name**.
 - **Add photos:** see [`images/README.md`](images/README.md).
 - **Colors and fonts:** edit the `:root` section at the top of `css/styles.css`.
+- **About-me book pages:** each page is an `<article class="page">` inside `about.html`. Edit text there; keep the order (cover first).
 
 ## Preview locally
 Double-click `index.html` to open it in your browser.
