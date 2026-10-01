@@ -73,7 +73,7 @@
   /* ---------- Photography lightbox (big polaroid) ---------- */
   const lightbox = $('#lightbox');
   if (lightbox && typeof lightbox.showModal === 'function') {
-    const items = $$('.polaroids .polaroid');
+    const items = $$('.sheets .sheet');
     const lbImg = $('img', lightbox);
     const lbPh = $('.ph', lightbox);
     const lbCap = $('.cap', lightbox);

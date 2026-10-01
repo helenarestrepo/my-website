@@ -43,11 +43,11 @@ The site picks them up automatically, with no code changes needed. Until a file 
 |---|---|---|
 | `social-01.jpg` … `social-06.jpg` | 1080 × 1350 | 4:5 (Instagram portrait) |
 
-## 5. Photography page (polaroids)
+## 5. Photography page (clipped paper sheets)
 
 | File names | Size (px) | Shape |
 |---|---|---|
-| `photo-01.jpg` … `photo-12.jpg` | 1200 × 1200 | square (polaroid style) |
+| `photo-01.jpg` … `photo-12.jpg` | 1200 × 1500 | 4:5 portrait |
 
 **Captions:** open `photography.html` and replace each `caption goes here · location`.
 
