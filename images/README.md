@@ -37,7 +37,7 @@ Want different objects? Use any names you like, then update the matching `cutout
 | `book-normal-people.jpg`, `book-talking-at-night.jpg`, `book-song-of-achilles.jpg`, `book-project-hail-mary.jpg` | 400 × 600 | 2:3 cover | Chapter 4: your favorite books |
 | `food.jpg` | 800 × 800 | square | Chapter 6: a favorite meal |
 
-**Text still to fill in:** open `about.html` and search for these placeholders: `restaurant` (Beli top spots), `song · artist` (on repeat) and `name · name` (your dogs).
+**Text still to fill in:** open `about.html` and search for these placeholders: `restaurant` (Beli top spots).
 
 ## 3. Work: covers and case study galleries
 
