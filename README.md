@@ -7,7 +7,8 @@ My personal portfolio and resume site: plain HTML, CSS and JavaScript, hosted fr
 | Page | File |
 |---|---|
 | Home | `index.html` |
-| About Me (flip book + experience, skills, education) | `about.html` |
+| About Me (flip book, Houston → Miami map, how I work) | `about.html` |
+| Résumé (experience, skills, education, PDF download) | `resume.html` |
 | Work (overview) | `work.html` |
 | Case studies | `work-quit-games.html`, `work-monarch.html`, `work-storage-rentals.html`, `work-classical-waves.html` |
 | Social | `social.html` |

@@ -73,7 +73,7 @@
   /* ---------- Photography lightbox (big polaroid) ---------- */
   const lightbox = $('#lightbox');
   if (lightbox && typeof lightbox.showModal === 'function') {
-    const items = $$('.polaroids .polaroid');
+    const items = $$('.sheets .sheet');
     const lbImg = $('img', lightbox);
     const lbPh = $('.ph', lightbox);
     const lbCap = $('.cap', lightbox);
@@ -236,4 +236,7 @@
     };
     follow();
   }
+
+  /* ---------- Map: hold the plane mid-flight for reduced motion ---------- */
+  if (reduceMotion) $$('svg.map').forEach((svg) => { if (svg.pauseAnimations) { svg.setCurrentTime(3.5); svg.pauseAnimations(); } });
 })();
