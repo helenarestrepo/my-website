@@ -750,3 +750,67 @@ a.glass:hover::after { background-position: -30% 0; }
 .projected .ph img { max-height: 76vh; width: 100%; object-fit: contain; }
 .projected .cap { display: block; margin-top: 18px; font-family: 'Reenie Beanie', cursive; font-size: 2rem; color: #F2F2F5; }
 .lightbox.projector .round-btn { background: rgba(255, 255, 255, .14); color: #fff; box-shadow: none; }
+
+/* ---------- Animated client banner ---------- */
+.client-banner { position: relative; padding: clamp(22px, 4vw, 40px) 0; overflow: hidden; }
+.cb-band {
+  transform: rotate(-2deg); margin: 0 -3%; padding: 14px 0; border-radius: 0; display: grid; gap: 12px;
+  --mc: rgba(255, 255, 255, .72);
+}
+.cb-row { display: flex; overflow: hidden; }
+.cb-track { display: flex; align-items: center; gap: 14px; padding: 0 7px; list-style: none; flex-shrink: 0; animation: cb-scroll 48s linear infinite; }
+.cb-row.rev .cb-track { animation-direction: reverse; animation-duration: 62s; }
+.client-banner:hover .cb-track { animation-play-state: paused; }
+@keyframes cb-scroll { to { transform: translateX(-100%); } }
+.cb-pill {
+  display: inline-flex; align-items: center; gap: .32em; white-space: nowrap;
+  padding: .28em .75em .3em .45em; border-radius: 999px; background: var(--c);
+  font-weight: 800; letter-spacing: -.055em; word-spacing: .08em; font-size: clamp(1.45rem, 3.4vw, 2.6rem); line-height: 1.1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 10px 18px -12px rgba(40, 44, 60, .45);
+}
+.cb-pill .e { font-size: .82em; }
+.cb-pill small { margin-left: .35em; font-size: .36em; font-weight: 600; letter-spacing: 0; word-spacing: normal; color: var(--ink-soft); }
+.cb-word { display: flex; align-items: center; gap: 14px; white-space: nowrap; font-weight: 700; letter-spacing: -.03em; font-size: clamp(1rem, 1.8vw, 1.3rem); color: var(--ink-soft); }
+.cb-word::after { content: "✦"; color: var(--pink); }
+.cb-word:nth-child(3n+2)::after { color: var(--blue); } .cb-word:nth-child(3n)::after { color: var(--orange); }
+.client-banner.compact { padding-top: 6px; }
+.client-banner.compact .cb-pill { font-size: clamp(1.2rem, 2.6vw, 1.9rem); }
+@media (prefers-reduced-motion: reduce) {
+  .cb-track { animation: none; flex-wrap: wrap; justify-content: center; flex-shrink: 1; }
+  .cb-track[aria-hidden="true"] { display: none; }
+  .cb-row { justify-content: center; }
+}
+
+/* ---------- Work: credit note, industries, roster, scale strips ---------- */
+.credit { max-width: 46em; font-size: .95rem; color: var(--ink-soft); margin-top: 6px; }
+.industries { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.industries li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 12px; background: var(--c); font-weight: 600; font-size: .95rem; box-shadow: var(--shadow); }
+.industries b { min-width: 22px; height: 22px; border-radius: 11px; display: inline-grid; place-items: center; background: rgba(255, 255, 255, .85); font-size: .78rem; }
+.roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+.roster-card { display: grid; grid-template-columns: 52px 1fr; gap: 4px 14px; align-items: start; padding: 20px; color: var(--ink); text-decoration: none; --mc: rgba(255, 255, 255, .72); }
+.roster-card .app-icon { width: 52px; height: 52px; border-radius: 14px; font-size: 1.5rem; grid-row: span 4; background: var(--c); }
+.glass.roster-card .app-icon { background: var(--c); }
+.roster-name { font-weight: 800; letter-spacing: -.05em; word-spacing: .1em; font-size: 1.35rem; line-height: 1.05; }
+.roster-meta { font-size: .85rem; color: var(--ink-soft); }
+.roster-meta .ind { font-weight: 700; color: var(--ink); margin-right: 6px; }
+.roster-meta .ind::after { content: " ·"; font-weight: 400; color: var(--ink-soft); }
+.roster-scope { font-size: .93rem; margin: 6px 0 4px; }
+.roster-tag { font-size: .78rem; font-weight: 600; color: var(--ink-soft); }
+.scale { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 14px; }
+.scale li { padding: 5px 10px; border-radius: 9px; background: rgba(255, 255, 255, .78); font-size: .82rem; font-weight: 700; letter-spacing: -.01em; }
+
+/* ---------- Case studies: account at a glance ---------- */
+.glance-head { margin-top: 22px; }
+.facts.glance { margin-top: 10px; grid-template-columns: repeat(4, 1fr); }
+.facts.glance .fact:nth-child(4n+1) { border-left: 0; }
+.facts.glance .fact:nth-child(n+5) { border-top: 1px solid var(--line); }
+.story .credit { margin-top: 14px; }
+@media (max-width: 760px) {
+  .facts.glance { grid-template-columns: 1fr 1fr; }
+  .facts.glance .fact { border-left: 0 !important; border-top: 1px solid var(--line); }
+  .facts.glance .fact:nth-child(2n) { border-left: 1px solid var(--line) !important; }
+  .facts.glance .fact:nth-child(-n+2) { border-top: 0; }
+}
+a.glass.roster-card { display: grid; }
+.roster-card > * { min-width: 0; }
+.roster-card .link-more { justify-self: start; }
