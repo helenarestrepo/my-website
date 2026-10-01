@@ -1,81 +1,68 @@
 # Images to add
 
-Drop your photos into this `images/` folder using **exactly** these file names (all lowercase, `.jpg`).
+Drop your photos into this `images/` folder using **exactly** these file names (all lowercase).
 The site picks them up automatically, with no code changes needed. Until a file exists, the site shows a soft colored placeholder labeled with the file name it's waiting for.
 
 **Tips**
-- Export as **JPG, quality ~80%**, and try to keep each file **under 400 KB** (free tool: [squoosh.app](https://squoosh.app)).
+- Photos: export as **JPG, quality ~80%**, under **400 KB** each (free tool: [squoosh.app](https://squoosh.app)).
+- Cutouts: export as **PNG with a transparent background** (free tool: [remove.bg](https://www.remove.bg)).
 - Bigger is fine if the **shape** matches; the site crops to fill each frame.
 - Only use client work you're allowed to share publicly.
 
-## Home & About
+---
 
-| File name | Size (px) | Shape | Where it shows | What to use |
-|---|---|---|---|---|
-| `helena-hero.jpg` | 1800 × 1125 | 16:10 wide | Home, under the headline | A polished, wide portrait or a lifestyle shot of you at work. |
-| `helena-about.jpg` | 1000 × 1250 | 4:5 portrait | About page + "About me" tile on Home | A friendly portrait (with a dog or two, if you like). |
+## 1. Home page cutouts → `images/cutouts/` folder
 
-## Work: cover images (Home tiles, Work page, top of each case study)
+These sit along the bottom of the home page hero, Pretty Little Marketer style. Use **transparent PNGs** with the object touching the bottom edge of the image. Black-and-white works great for the photo of you.
 
-| File name | Size (px) | Shape |
+| File name | Shape (w × h) | Idea |
 |---|---|---|
-| `quit-games-cover.jpg` | 1600 × 900 | 16:9 |
-| `monarch-cover.jpg` | 1600 × 900 | 16:9 |
-| `sra-cover.jpg` | 1600 × 900 | 16:9 |
-| `classical-waves-cover.jpg` | 1600 × 900 | 16:9 |
+| `cutouts/helena.png` | 900 × 1200 | You, cut out (the centerpiece) |
+| `cutouts/palm.png` | 800 × 1200 | A palm tree (Miami) |
+| `cutouts/cafecito.png` | 800 × 800 | A cafecito or coffee cup |
+| `cutouts/dog.png` | 800 × 800 | One of your dogs |
+| `cutouts/popcorn.png` | 900 × 1200 | Popcorn bucket or film clapper |
+| `cutouts/vinyl.png` | 800 × 800 | A record or headphones |
+| `cutouts/boots.png` | 900 × 1200 | Cowboy boots (Texas) |
 
-The Work page crops these to 4:3, so keep the subject near the center.
+Want different objects? Use any names you like, then update the matching `cutouts/...` lines near the top of `index.html`.
 
-## Work: case study galleries (3 per project)
+## 2. About page (the book) & home "get to know me"
 
-For each project, `-1` is a wide banner and `-2` / `-3` sit side by side underneath.
+| File name | Size (px) | Shape | Where |
+|---|---|---|---|
+| `helena-about.jpg` | 1000 × 1250 | 4:5 | Chapter 1 of the book, plus the Home page collage |
+| `dogs-1.jpg`, `dogs-2.jpg`, `dogs-3.jpg` | 600 × 600 | square | Chapter 7 photo-booth strip, plus Home |
+| `film-1.jpg` … `film-4.jpg` | 400 × 600 | 2:3 poster | Chapter 3: your top 4 Letterboxd films (poster images) |
+| `book-current.jpg` | 400 × 600 | 2:3 | Chapter 4: cover of what you're reading |
+| `food.jpg` | 800 × 800 | square | Chapter 5: a favorite meal |
+
+**Text to fill in:** open `about.html` and search for these placeholders: `book title`, `favorite book one`, `restaurant`, `song · artist` and `name · name`.
+
+## 3. Work: covers and case study galleries
 
 | File names | Size (px) | Shape |
 |---|---|---|
-| `quit-games-1.jpg`, `monarch-1.jpg`, `sra-1.jpg`, `classical-waves-1.jpg` | 1600 × 800 | 2:1 wide |
-| `quit-games-2.jpg`, `quit-games-3.jpg` | 1200 × 900 | 4:3 |
-| `monarch-2.jpg`, `monarch-3.jpg` | 1200 × 900 | 4:3 |
-| `sra-2.jpg`, `sra-3.jpg` | 1200 × 900 | 4:3 |
-| `classical-waves-2.jpg`, `classical-waves-3.jpg` | 1200 × 900 | 4:3 |
+| `quit-games-cover.jpg`, `monarch-cover.jpg`, `sra-cover.jpg`, `classical-waves-cover.jpg` | 1600 × 900 | 16:9 (the Work page crops to 4:3, so keep the subject centered) |
+| `quit-games-1.jpg`, `monarch-1.jpg`, `sra-1.jpg`, `classical-waves-1.jpg` | 1600 × 800 | 2:1 wide banner |
+| `…-2.jpg` and `…-3.jpg` for each project (e.g. `monarch-2.jpg`) | 1200 × 900 | 4:3 |
 
-Ideas: behind-the-scenes from shoots, website screenshots, collateral and menus, social posts.
-
-## Social page
+## 4. Social page & Home dark section
 
 | File names | Size (px) | Shape |
 |---|---|---|
 | `social-01.jpg` … `social-06.jpg` | 1080 × 1350 | 4:5 (Instagram portrait) |
 
-Screenshots or exports of your best-performing posts.
+## 5. Photography page (polaroids)
 
-## Photography page (12 photos)
-
-The gallery uses a mix of shapes so it feels like a real photo wall. Match these shapes:
-
-| File name | Size (px) | Shape |
+| File names | Size (px) | Shape |
 |---|---|---|
-| `photo-01.jpg` | 1600 × 1200 | 4:3 landscape (also used on the Home tile) |
-| `photo-02.jpg` | 1200 × 1600 | 2:3 tall |
-| `photo-03.jpg` | 1200 × 1200 | square |
-| `photo-04.jpg` | 1200 × 1500 | 4:5 portrait |
-| `photo-05.jpg` | 1600 × 1067 | 3:2 landscape |
-| `photo-06.jpg` | 1200 × 1500 | 4:5 portrait |
-| `photo-07.jpg` | 1600 × 1200 | 4:3 landscape |
-| `photo-08.jpg` | 1200 × 1200 | square |
-| `photo-09.jpg` | 1200 × 1600 | 2:3 tall |
-| `photo-10.jpg` | 1600 × 1067 | 3:2 landscape |
-| `photo-11.jpg` | 1200 × 1500 | 4:5 portrait |
-| `photo-12.jpg` | 1600 × 1200 | 4:3 landscape |
+| `photo-01.jpg` … `photo-12.jpg` | 1200 × 1200 | square (polaroid style) |
 
-**Captions:** open `photography.html`, find "Caption goes here · Location" under each photo and replace it.
+**Captions:** open `photography.html` and replace each `caption goes here · location`.
 
-## Link preview
+## 6. Link preview
 
 | File name | Size (px) | What to use |
 |---|---|---|
 | `og-image.jpg` | 1200 × 630 | Shown when your link is shared on LinkedIn, iMessage or Slack. A screenshot of your home page works well. |
-
----
-
-### Changing alt text
-Alt text describes an image for screen-reader users. Open the page, search for the file name (e.g. `monarch-cover.jpg`), and edit the `alt="..."` text next to it.
