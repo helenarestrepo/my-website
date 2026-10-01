@@ -217,4 +217,23 @@
     wide.addEventListener('change', setup);
     setup();
   }
+
+  /* ---------- Holographic cursor orb (desktop, motion allowed) ---------- */
+  const orb = $('.cursor-orb');
+  if (orb && !reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.documentElement.classList.add('has-orb');
+    let tx = -100, ty = -100, x = -100, y = -100;
+    document.addEventListener('pointermove', (e) => {
+      tx = e.clientX; ty = e.clientY;
+      orb.classList.toggle('hover', !!e.target.closest('a, button, .glass, .polaroid, summary'));
+      orb.classList.remove('away');
+    });
+    document.addEventListener('pointerleave', () => orb.classList.add('away'));
+    const follow = () => {
+      x += (tx - x) * 0.18; y += (ty - y) * 0.18;
+      orb.style.transform = `translate(${x}px, ${y}px)`;
+      requestAnimationFrame(follow);
+    };
+    follow();
+  }
 })();
