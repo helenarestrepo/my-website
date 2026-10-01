@@ -112,6 +112,8 @@
     let current = 0;       // single mode: page index
     let flipped = 0;       // spread mode: number of turned leaves
     let leaves = [];
+    // with an odd page count the last leaf has no back, so stop with the back cover on the right
+    const maxFlip = () => (pages.length % 2 ? leaves.length - 1 : leaves.length);
 
     const visiblePages = () => {
       if (mode === 'single') return [pages[current]];
@@ -125,11 +127,11 @@
           leaf.style.zIndex = k < flipped ? k + 1 : leaves.length * 2 - k;
         });
         book.classList.toggle('closed', flipped === 0);
-        book.classList.toggle('finished', flipped === leaves.length);
+        book.classList.toggle('finished', flipped === leaves.length && pages.length % 2 === 0);
       } else {
         pages.forEach((pg, i) => {
           pg.classList.toggle('current', i === current);
-          pg.classList.toggle('back', i === current && direction < 0);
+          pg.classList.toggle('turning-back', i === current && direction < 0);
         });
       }
       const shown = visiblePages();
@@ -140,17 +142,17 @@
       });
       status.textContent = shown.map((pg) => pg.dataset.title).join(' · ');
       $('[data-book="prev"]', book).disabled = mode === 'spread' ? flipped === 0 : current === 0;
-      $('[data-book="next"]', book).disabled = mode === 'spread' ? flipped === leaves.length : current === pages.length - 1;
+      $('[data-book="next"]', book).disabled = mode === 'spread' ? flipped >= maxFlip() : current === pages.length - 1;
     };
 
     const go = (dir) => {
-      if (mode === 'spread') flipped = Math.max(0, Math.min(leaves.length, flipped + dir));
+      if (mode === 'spread') flipped = Math.max(0, Math.min(maxFlip(), flipped + dir));
       else current = Math.max(0, Math.min(pages.length - 1, current + dir));
       render(dir);
     };
 
     const goToPage = (i) => {
-      if (mode === 'spread') flipped = i % 2 === 0 ? i / 2 : (i + 1) / 2;
+      if (mode === 'spread') flipped = Math.min(maxFlip(), i % 2 === 0 ? i / 2 : (i + 1) / 2);
       else current = i;
       render(1);
     };

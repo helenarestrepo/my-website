@@ -252,6 +252,7 @@ h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.025em; line-height:
   display: grid; place-items: center; cursor: pointer; transition: transform .2s var(--pop), background .2s;
 }
 .arrow-btn:hover { background: var(--butter); transform: translateY(-2px); }
+.arrow-btn:disabled { opacity: .35; cursor: default; background: var(--white); transform: none; }
 .arrow-btn svg { width: 22px; height: 22px; }
 
 .card {
@@ -503,6 +504,9 @@ a.card:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 10px 0 
 .page-list li::before { content: "✦"; position: absolute; left: 0; color: var(--hot-pink); }
 .posters { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .posters .ph { aspect-ratio: 2 / 3; border: 1px solid var(--ink); }
+.poster { margin: 0; }
+.poster figcaption { margin-top: 6px; font-weight: 700; font-size: .8rem; line-height: 1.15; letter-spacing: -.02em; }
+.poster figcaption span { display: block; font-family: var(--mono); font-weight: 400; font-size: .6rem; letter-spacing: .02em; color: var(--ink-soft); margin-top: 2px; }
 .ticket {
   align-self: flex-start; background: var(--butter); border: 1px solid var(--ink); border-radius: 8px; padding: 8px 16px 8px 20px; rotate: -2deg;
   -webkit-mask: radial-gradient(circle 7px at 0 50%, transparent 98%, #000); mask: radial-gradient(circle 7px at 0 50%, transparent 98%, #000);
@@ -530,7 +534,12 @@ a.card:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 10px 0 
   border: 1px solid var(--ink); outline: 5px dotted #FFFDF7; outline-offset: -3px; rotate: var(--r, -3deg);
 }
 .stamp:nth-child(2) { --r: 4deg; } .stamp:nth-child(3) { --r: -1deg; }
+.stamp small { display: block; font-size: .56rem; opacity: .7; margin-top: 2px; }
+.stamps-4 { display: grid; grid-template-columns: repeat(2, minmax(0, 116px)); gap: 16px 18px; }
+.stamps-4 .stamp { width: auto; height: 112px; }
+.stamps-4 .stamp:nth-child(4) { --r: 3deg; }
 .stamp b { font-family: var(--bubble); font-weight: 400; font-size: 2.2rem; line-height: 1; }
+.page .pill-row { justify-content: flex-start; }
 .book-controls { display: none; align-items: center; justify-content: center; gap: 16px; margin-top: 22px; }
 .book-status { min-width: 16ch; text-align: center; }
 
@@ -550,7 +559,7 @@ a.card:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 10px 0 
 .book.single .book-pages { display: block; perspective: 1600px; max-width: 460px; margin: 0 auto; }
 .book.single .page { display: none; min-height: 600px; box-shadow: 6px 8px 0 -2px var(--ink); }
 .book.single .page.current { display: flex; animation: turn-in .6s var(--ease); transform-origin: left center; }
-.book.single .page.current.back { animation-name: turn-back; transform-origin: right center; }
+.book.single .page.current.turning-back { animation-name: turn-back; transform-origin: right center; }
 @keyframes turn-in { from { transform: rotateY(-75deg); opacity: 0; } }
 @keyframes turn-back { from { transform: rotateY(75deg); opacity: 0; } }
 @media (max-width: 420px) { .posters { grid-template-columns: repeat(2, 1fr); } }
